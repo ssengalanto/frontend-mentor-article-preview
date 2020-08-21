@@ -1,3 +1,11 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
 
-export const App: React.FC = () => <div>app</div>;
+import { main } from 'assets/theme';
+import { Wrapper } from 'components';
+
+export const App: React.FC = () => (
+  <ThemeProvider theme={main}>
+    <Wrapper>app</Wrapper>;
+  </ThemeProvider>
+);

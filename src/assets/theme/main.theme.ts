@@ -1,7 +1,7 @@
 /* eslint-disable no-useless-computed-key */
 import { DefaultTheme } from 'styled-components';
 
-import { Fonts, Colors, Breakpoints, FontWeight } from 'shared/enums';
+import { Fonts, Colors, Breakpoints, FontWeight } from 'enums';
 
 export const main: DefaultTheme = {
   color: {

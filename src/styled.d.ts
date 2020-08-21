@@ -1,5 +1,5 @@
 import 'styled-components';
-import { Colors } from 'shared/enums';
+import { Colors } from 'enums';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
