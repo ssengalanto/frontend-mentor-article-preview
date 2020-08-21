@@ -1,9 +1,9 @@
 import React, { forwardRef } from 'react';
 
+import { Social } from 'components';
+import { Breakpoints } from 'enums';
+import { useWindowSize } from 'hooks';
 import { ReactComponent as ShareIcon } from 'assets/images/arrow-redo.svg';
-import { ReactComponent as PinterestIcon } from 'assets/images/icon-pinterest.svg';
-import { ReactComponent as TwitterIcon } from 'assets/images/icon-twitter.svg';
-import { ReactComponent as FacebookIcon } from 'assets/images/icon-facebook.svg';
 
 import { S, ShareButtonProps } from './share-button.styles';
 
@@ -12,21 +12,22 @@ interface Props extends ShareButtonProps {
 }
 
 export const ShareButton = forwardRef(
-  ({ open, ...props }: Props, ref: React.Ref<HTMLButtonElement>): JSX.Element => (
-    <div style={{ position: 'relative' }}>
-      {open ? (
-        <S.AbsoluteContainer>
-          <S.Social>
-            <p className="social__text">Share</p>
-            <FacebookIcon />
-            <TwitterIcon />
-            <PinterestIcon />
-          </S.Social>
-        </S.AbsoluteContainer>
-      ) : null}
-      <S.Button {...props} ref={ref} isOpen={open}>
-        <ShareIcon className="share-button__icon" />
-      </S.Button>
-    </div>
-  ),
+  ({ open, ...props }: Props, ref: React.Ref<HTMLButtonElement>): JSX.Element => {
+    const { width } = useWindowSize();
+
+    const isMobileScreen = width && width <= +Breakpoints.MOBILE.split('em')[0] * 16;
+
+    return (
+      <div style={{ position: 'relative' }}>
+        {open && isMobileScreen ? null : open ? (
+          <S.AbsoluteContainer>
+            <Social />
+          </S.AbsoluteContainer>
+        ) : null}
+        <S.Button {...props} ref={ref} isOpen={open}>
+          <ShareIcon className="share-button__icon" />
+        </S.Button>
+      </div>
+    );
+  },
 );
