@@ -5,5 +5,5 @@ export enum Colors {
   GRAYISH_BLUE_LIGHT = '#ECF2F8',
   WHITE = '#FFFFFF',
   BLACK = '#000000',
-  ASH = '#F2F2F2',
+  ASH = '#ECF2F8',
 }
