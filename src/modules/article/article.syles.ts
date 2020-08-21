@@ -7,6 +7,7 @@ import { Card } from 'components';
 const Article = styled(Card)`
   display: flex;
   flex-direction: column;
+  position: relative;
   max-width: 73rem;
 
   @media (min-width: ${(props) => props.theme.breakpoint.desktop}) {
@@ -57,11 +58,12 @@ const Article = styled(Card)`
   .article__content {
     color: ${(props) => props.theme.color.text.default};
     font-weight: ${(props) => props.theme.density['semi-bold']};
-    line-height: 20px;
-    letter-spacing: 0.121875px;
   }
 
-  .article__avatar {
+  .article__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding-top: 2rem;
   }
 `;

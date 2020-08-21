@@ -6,12 +6,7 @@ export interface AvatarProps extends React.ComponentPropsWithoutRef<'div'> {
 
 const Avatar = styled.div<AvatarProps>`
   display: flex;
-  justify-content: space-between;
   align-items: center;
-
-  .avatar__details {
-    display: flex;
-  }
 
   .avatar__img {
     height: 4rem;
@@ -33,24 +28,6 @@ const Avatar = styled.div<AvatarProps>`
   .avatar__date {
     color: ${(props) => props.theme.color.text.default};
     font-weight: ${(props) => props.theme.density['semi-bold']};
-  }
-
-  .avatar__btn {
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 3.2rem;
-    width: 3.2rem;
-    border-radius: 50%;
-    cursor: pointer;
-    background-color: ${(props) => props.theme.color.bg.wash};
-  }
-
-  .avatar__arrow-icon {
-    height: 1.7rem;
-    width: 1.7rem;
-    fill: ${(props) => props.theme.color.brand.primary};
   }
 `;
 
