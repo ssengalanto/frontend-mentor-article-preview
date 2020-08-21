@@ -4,12 +4,16 @@ const Social = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 0 3.2rem;
-  min-width: 25rem;
-  min-height: 5.5rem;
-  border-radius: 1rem;
+  min-width: 20rem;
   background-color: ${(props) => props.theme.color.brand.primary};
-  box-shadow: 0px 10px 10px rgba(201, 213, 225, 0.503415);
+
+  @media (min-width: ${(props) => props.theme.breakpoint.desktop}) {
+    min-width: 25rem;
+    min-height: 5.5rem;
+    padding: 0 3.2rem;
+    border-radius: 1rem;
+    box-shadow: 0px 10px 10px rgba(201, 213, 225, 0.503415);
+  }
 
   .social__text {
     text-transform: uppercase;

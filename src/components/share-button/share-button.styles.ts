@@ -18,7 +18,7 @@ const Button = styled.button<ShareButtonProps>`
     if (!props.isOpen) {
       return props.theme.color.bg.wash;
     }
-    return props.theme.color.brand.primary;
+    return props.theme.color.text.default;
   }};
 
   .share-button__icon {
