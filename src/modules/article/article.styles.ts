@@ -38,11 +38,12 @@ const Article = styled(Card)<{ isOpen: boolean }>`
 
   .article__row-2 {
     flex: 1 1 60%;
-    padding: 3.2rem;
+    padding: 3.5rem;
     padding-bottom: 2rem;
     background-color: ${(props) => props.theme.color.bg.default};
 
     @media (min-width: ${(props) => props.theme.breakpoint.desktop}) {
+      padding: 3.5rem;
       border-radius: 0 1rem 1rem 0;
     }
   }
@@ -82,7 +83,7 @@ const Article = styled(Card)<{ isOpen: boolean }>`
     justify-content: space-between;
     align-items: center;
     min-height: 8rem;
-    padding: 2rem 3.2rem;
+    padding: 2rem 3.5rem;
     border-radius: 0 0 1rem 1rem;
     background-color: ${(props) =>
       props.isOpen ? props.theme.color.brand.primary : props.theme.color.bg.default};

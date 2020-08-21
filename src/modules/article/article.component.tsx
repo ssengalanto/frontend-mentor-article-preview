@@ -4,7 +4,7 @@ import { useToggle } from 'hooks';
 import { Avatar, ShareButton, Social } from 'components';
 
 import { articleMockData } from './article.mock';
-import { S } from './article.syles';
+import { S } from './article.styles';
 
 export const Article: React.FC = () => {
   const {
