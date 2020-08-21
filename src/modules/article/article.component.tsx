@@ -2,8 +2,8 @@ import React from 'react';
 
 import { useToggle } from 'hooks';
 import { Avatar, ShareButton, Social } from 'components';
-import image from 'assets/images/avatar-michelle.jpg';
 
+import { articleMockData } from './article.mock';
 import { S } from './article.syles';
 
 export const Article: React.FC = () => {
@@ -17,16 +17,16 @@ export const Article: React.FC = () => {
       <div className="article__row-1" />
       <div className="article__container">
         <div className="article__row-2">
-          <h2 className="article__heading">
-            Shift the overall look and feel by adding these wonderful touches to furniture in your
-            home
-          </h2>
-          <p className="article__content">
-            Ever been in a room and felt like something was missing? Perhaps it felt slightly bare
-            and uninviting. I’ve got some simple tips to help you make any room feel complete.
-          </p>
+          <h2 className="article__heading">{articleMockData.heading}</h2>
+          <p className="article__content">{articleMockData.content}</p>
           <div className="article__footer-desktop">
-            <Avatar onClick={handleToggle} className="article__avatar" image={image} />
+            <Avatar
+              onClick={handleToggle}
+              className="article__avatar"
+              image={articleMockData.image}
+              owner={articleMockData.owner}
+              date={articleMockData.date}
+            />
             <ShareButton open={open} onClick={handleToggle} />
           </div>
         </div>
@@ -34,7 +34,13 @@ export const Article: React.FC = () => {
           {open ? (
             <Social />
           ) : (
-            <Avatar onClick={handleToggle} className="article__avatar" image={image} />
+            <Avatar
+              onClick={handleToggle}
+              className="article__avatar"
+              image={articleMockData.image}
+              owner={articleMockData.owner}
+              date={articleMockData.date}
+            />
           )}
           <ShareButton open={open} onClick={handleToggle} />
         </div>
