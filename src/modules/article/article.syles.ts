@@ -60,6 +60,10 @@ const Article = styled(Card)`
     line-height: 20px;
     letter-spacing: 0.121875px;
   }
+
+  .article__avatar {
+    padding-top: 2rem;
+  }
 `;
 
 export const S = { Article };

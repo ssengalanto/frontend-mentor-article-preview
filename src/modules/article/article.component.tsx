@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Avatar } from 'components';
+import image from 'assets/images/avatar-michelle.jpg';
 import { S } from './article.syles';
 
 export const Article: React.FC = () => (
@@ -13,6 +15,7 @@ export const Article: React.FC = () => (
         Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and
         uninviting. I’ve got some simple tips to help you make any room feel complete.
       </p>
+      <Avatar className="article__avatar" image={image} />
     </div>
   </S.Article>
 );
